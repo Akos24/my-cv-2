@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.7;
+    font-size: small;
+    font-family: Garamond, sans-serif;
+    color: var(--mygray);
+}
+
+body {
+    background-color: var(--mylightblue);
+}
+
+:root {
+    --mygray: #E7CEA6;
+    --mydarkblue: #0A6EBD;
+    --myblue: #5A96E3;
+    --mylightblue: #A1C2F1;
+}
+
+.flexbox {
+    background-image: url(./portfolio-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-left: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main-title {
+    font-size: 4em;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.secondary-title {
+    font-size: 2em;
+    padding-bottom: 80px;
+}
+
+.flexbox .flex-item-2 {
+    align-self: center;
+    padding-left: 80px;
+}
+
+.flex-item-2 img {
+    height: 30vw;
+    border-radius: 50%;
+    border: 2px solid var(--mydarkblue)
+}
+
+@media (min-width: 1500px) {
+    .main-title {
+        font-size: 7em;
+    }
+    .secondary-title {
+        font-size: 3.5em;
+    }
+}
+
+@media (min-width: 3000px) {
+    .main-title {
+        font-size: 12em;
+    }
+    .secondary-title {
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 700px) {
+    .flexbox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-item-2 img {
+        position: relative;
+        right: 40px;
+        bottom: 50px;
+        height: 200px;
+    }
+    .main-title {
+        margin: 0 auto;
+    }
+
+    .secondary-title {
+        margin-left: 40px;
+    }
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 30px;
+    background-color: #5A96E3;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    border-right: none;
+    border-left: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--mydarkblue);
+    font-size: 1.4em;
+    transition: color 200ms ease-in-out;
+}
+
+
+.nav-div {
+    width: 100vw;
+    text-align: center;
+}
+
+nav .nav-div:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.nav-div:hover a {
+    color: black;
+}
+
+
+@media (max-width: 770px) {
+    nav {
+        height: 70px;
+    }
+    
+    .nav-div {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav div a {
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-div {
+        width: 100vw;
+        text-align: center;
+    }
+
+    nav .nav-div:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+    nav div a {
+        font-size: 15px;
+    }
+}
+
+.left-data > section > .section-title {
+    font-size: 3em;
+    background-color: var(--myblue);
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: left;
+    border: 2px solid var(--mydarkblue);
+    border-left: none;
+    padding-left: 10px;
+}
+
+.right-data > section > .section-title {
+    font-size: 3em;
+    background-color: var(--myblue);
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: left;
+    border: 2px solid var(--mydarkblue);
+    border-right: none;
+    padding-left: 10px;
+}
+
+.left-data > section > .sec-section {
+    background-color: var(--mydarkblue);
+    width: 300px;
+    margin: 10px 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: 1.5px solid black;
+    border-left: none;
+}
+
+.right-data > section > .sec-section {
+    background-color: var(--mydarkblue);
+    width: auto;
+    margin: 10px 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    border: 1.5px solid black;
+    border-right: none;
+}
+
+.left-data > section > .container {
+    background-color: white;
+    width: 500px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1.5px solid black;
+    padding: 10px;
+    border-left: none;
+}
+
+.right-data > section > .container {
+    background-color: white;
+    width: 500px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1.5px solid black;
+    padding: 10px;
+    border-right: none;
+}
+
+.left-data > section > .container > * {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+}
+
+.right-data > section > .container > * {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+}
+
+.left-data > section > .container > * > a {
+    font-size: 20px;
+    color: var(--mydarkblue);
+}
+
+.right-data > section > .container > * > a {
+    font-size: 20px;
+    color: var(--mydarkblue);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .right-data > section > .section-title, .left-data > section > .section-title {
+        font-size: 2em;
+        width: 300px;
+    }
+    .right-data > section > .sec-section, .left-data > section > .sec-section {
+        width: 300px;
+    }
+    .right-data > section > .container, .left-data > section > .container {
+        width: 300px;
+    }
+    
+    .right-data > section > .container > *, .left-data > section > .container > * {
+        font-size: 15px;
+        color: black;
+    }
+    .right-data > section > .container > * > a, .left-data > section > .container > * > a {
+        font-size: 15px;
+        color: var(--mydarkblue);
+    }
+
+}
+
+@media (max-width: 650px) {
+    .right-data > section > .section-title, .left-data > section > .section-title {
+        font-size: 1em;
+        width: 200px;
+    }
+    .right-data > section > .sec-section, .left-data > section > .sec-section {
+        width: 200px;
+    }
+    .right-data > section > .container, .left-data > section > .container {
+        width: 200px;
+    }
+    
+    .right-data > section > .container > *, .left-data > section > .container > * {
+        font-size: 10px;
+        color: black;
+    }
+    .right-data > section > .container > * > a, .left-data > section > .container > * > a {
+        font-size: 10px;
+        color: var(--mydarkblue);
+    }
+}
+
+@media (max-width: 400px) {
+    .right-data > section > .section-title {
+        font-size: 2em;
+        background-color: var(--myblue);
+        width: 200px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: left;
+        border: 2px solid var(--mydarkblue);
+        border-left: none;
+        padding-left: 10px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .right-data > section > .sec-section {
+        background-color: var(--mydarkblue);
+        width: 200px;
+        margin: 10px 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-size: 20px;
+        padding-left: 10px;
+        border: 1.5px solid black;
+        border-left: none;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .right-data > section > .container {
+        background-color: white;
+        width: 200px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border: 1.5px solid black;
+        padding: 10px;
+        border-left: none;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+}
+
+footer {
+    width: 100vw;
+    background-color: #0A6EBD;
+    height: auto;
+    margin-top: 20px;
+    border-top: 2px solid var(--myblue);
+    padding: 5px;
+}
+
+.copyright {
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
