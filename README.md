@@ -1,2 +1,2 @@
-# my-cv-2
-My newly created CV with responsive web design, and a better user experience.
+## My CV as a Webpage with HTML & CSS - Second version
+Responsive web design, and use of flexboxes
